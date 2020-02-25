@@ -1,5 +1,5 @@
 const AIO_USERNAME = "pinkphantom"
-const AIO_KEY = "aio_YGGw33eM2p1iMwkFsmpIomzj7mBo"
+const AIO_KEY = "aio_SRXi93nSdlqLGK7AG0EiKEVEMPss"
 
 function setup() {
     let canvas = createCanvas(640, 480)
