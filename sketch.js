@@ -3,10 +3,14 @@ const AIO_KEY = "aio_SRXi93nSdlqLGK7AG0EiKEVEMPss"
 
 function setup() {
     let canvas = createCanvas(640, 480)
+    canvas.parent('p5')
+
+    // low framerate
+    // frameRate(1)
     noLoop()
 }
 
-async function draw() { // note "async" keyword
+async function draw() {
 
     // fetch our data
     let data = await fetchData("sensor-test")      // note the "await" keyword
@@ -75,7 +79,6 @@ async function draw() { // note "async" keyword
 
 }
 
-// this function fetches our data
 async function fetchData(feed) {
     return await new Promise((resolve, reject) => {
         let url = `https://io.adafruit.com/api/v2/${AIO_USERNAME}/feeds/${feed}/data`
